@@ -32,7 +32,7 @@
 	<stdio.h>
 	"map.h"
 
-1621872365 source:c:\users\the_i\documents\github\tarea_3\funciones.c
+1621877741 source:c:\users\the_i\documents\github\tarea_3\funciones.c
 	"list.h"
 	"funciones.h"
 	"map.h"
@@ -44,7 +44,7 @@
 
 1621865784 c:\users\the_i\documents\github\tarea_3\list.h
 
-1621872207 c:\users\the_i\documents\github\tarea_3\funciones.h
+1621877405 c:\users\the_i\documents\github\tarea_3\funciones.h
 	<stdio.h>
 	"map.h"
 	<stdbool.h>
@@ -61,7 +61,7 @@
 	<stdlib.h>
 	<assert.h>
 
-1621872528 source:c:\users\the_i\documents\github\tarea_3\main.c
+1621876149 source:c:\users\the_i\documents\github\tarea_3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

@@ -103,11 +103,11 @@ int main(){
             break;
 
         case 5://Busca pokemons por nombre en el almacenamiento
-            //printf("Ingrese su lugar de partida\n");
-            //scanf("%d",&x);
-            //scanf("%d",&y);
+            printf("Ingrese su lugar de partida\n");
+            scanf("%d",&x);
+            scanf("%d",&y);
 
-            ruta_aleatoria(Entregas,n);
+            ruta_aleatoria(Entregas,n,x,y);
 
             break;
 

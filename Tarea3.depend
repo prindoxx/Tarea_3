@@ -1,20 +1,34 @@
 # depslib dependency file v1.0
-1621820087 source:c:\users\jefte\documents\github\tarea_3\list.c
+1621832774 source:c:\users\jefte\documents\github\tarea_3\list.c
 	"list.h"
 	<stdlib.h>
 	<assert.h>
 
-1621820087 c:\users\jefte\documents\github\tarea_3\list.h
+1621832774 c:\users\jefte\documents\github\tarea_3\list.h
 
-1621820087 source:c:\users\jefte\documents\github\tarea_3\map.c
+1621832774 source:c:\users\jefte\documents\github\tarea_3\map.c
 	"Map.h"
 	<stdlib.h>
 	<assert.h>
 
-1621820087 c:\users\jefte\documents\github\tarea_3\map.h
+1621832774 c:\users\jefte\documents\github\tarea_3\map.h
 
-1621828155 source:c:\users\jefte\documents\github\tarea_3\main.c
+1621834681 source:c:\users\jefte\documents\github\tarea_3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"funciones.h"
+	"map.h"
+
+1621834650 source:c:\users\jefte\documents\github\tarea_3\funciones.c
+	"list.h"
+	"funciones.h"
+	"map.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1621834659 c:\users\jefte\documents\github\tarea_3\funciones.h
+	<stdio.h>
+	"map.h"
 

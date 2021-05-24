@@ -4,31 +4,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+#include <stdbool.h>
 
 //aqui se escriben las funciones
 
 //abre y guarda el archivo en un mapa
-void abrirArchivo(FILE * archivo, Map * Entregas ){
+void abrirArchivo(FILE * archivo, Map * Entregas,int n ){
 
     if(archivo == NULL){
 
         perror("ERROR");
-        return 1;
+        return;
 
     }
 
     int coorX;
     int coorY;
     int numeroEntrega;
+    bool flag;
 
     numeroEntrega = 1;
 
-    while(feof(archivo) == 0){
+    while(numeroEntrega <= n){
 
         fscanf(archivo, "%d %d", &coorX, &coorY);
         //printf("%d %d %d\n", coorX, coorY, numeroEntrega);
 
-        entrega* oEntrega = crearEntrega(numeroEntrega, coorX, coorY);
+        entrega* oEntrega = crearEntrega(numeroEntrega, coorX, coorY,flag);
 
         insertMap(Entregas, oEntrega->numeroEntrega, oEntrega);
 
@@ -41,13 +44,14 @@ void abrirArchivo(FILE * archivo, Map * Entregas ){
 
 }
 
-entrega* crearEntrega(int numEntrega, int coorX, int coorY){
+entrega* crearEntrega(int numEntrega, int coorX, int coorY,bool flag){
 
     entrega* oEntrega = (entrega*) malloc(sizeof(entrega));
-
+    flag = 0;
     oEntrega->numeroEntrega = numEntrega;
     oEntrega->coordenadaX = coorX;
     oEntrega->coordenadaY = coorY;
+    oEntrega->flag = flag;
 
     return oEntrega;
 
@@ -69,5 +73,49 @@ void mostrarMapa(Map* mapa){
         oEntrega = nextMap(mapa);
 
     }
+    return;
+}
 
+void dis_entregas(Map* mapa,int x,int y){
+
+    int aux,cont,suma_1,suma_2,distancia;
+    entrega* oEntrega_1 = (entrega*) malloc(sizeof(entrega));
+    entrega* oEntrega_2 = (entrega*) malloc(sizeof(entrega));
+
+    oEntrega_1 = searchMap(mapa,x);
+    oEntrega_2 = searchMap(mapa,y);
+
+    aux = oEntrega_1->coordenadaX;
+    cont = oEntrega_2->coordenadaX;
+
+    suma_1 = pow(aux - cont,2);
+
+    aux = oEntrega_1->coordenadaY;
+    cont = oEntrega_2->coordenadaY;
+
+    suma_2 = pow(aux - cont,2);
+
+    distancia = sqrt(suma_1+suma_2);
+    printf("La distancia que hay entre estas entregas es de: %d metros\n",distancia);
+
+    return;
+}
+
+void ruta_aleatoria(Map* mapa,int n){
+    int numero,cont = 0;
+    entrega* oEntrega = (entrega*) malloc(sizeof(entrega));
+
+    while(cont < n){
+        numero = rand() % n + 1;
+        oEntrega = searchMap(mapa,numero);
+        if(oEntrega->flag == 0){
+            printf("------------%d-----------\n",oEntrega->numeroEntrega);
+            printf("%d\n",oEntrega->coordenadaX);
+            printf("%d\n",oEntrega->coordenadaY);
+            oEntrega->flag = 1;
+            cont++;
+        }
+
+    }
+    printf("%d\n\n",cont);
 }

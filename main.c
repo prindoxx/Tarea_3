@@ -45,7 +45,8 @@ int lower_than_int(void * key1, void * key2) {
 
 
 int main(){
-    int n,numero;
+    int cantEntregas;
+    int idEntrega1, idEntrega2;
     FILE * archivo = fopen("tarea3_tsp.txt", "rb");
     Map* Entregas = createMap(is_equal_int);//Se crea el mapa para poder agregar la entregas, su clave sera el numero de entrega
     int op;
@@ -56,7 +57,7 @@ int main(){
         printf("Seleccione una opcion:\n");
         printf("1. Importar archivo de coordenadas \n");
         printf("2. Distancia entre entregas \n");
-        printf("3. Mostrar 3 entregas más cercanas a las coordenadas ingresadas \n");
+        printf("3. Mostrar 3 entregas mas cercanas a las coordenadas ingresadas \n");
         printf("4. Crear ruta \n");
         printf("5. Generar ruta aleatoria \n");
         printf("6. Mejorar ruta \n");
@@ -75,8 +76,8 @@ int main(){
         case 1://Importa un archivo CSV
 
             printf("Ingrese el numero de entregas a realizar\n");
-            scanf("%d",&n);
-            abrirArchivo(archivo, Entregas, n);
+            scanf("%d",&cantEntregas);
+            abrirArchivo(archivo, Entregas, cantEntregas);
             mostrarMapa(Entregas);
 
             break;
@@ -84,11 +85,11 @@ int main(){
         case 2://Agrega un pokemon al almacenamiento
 
 
-            printf("Ingrese las entregas a seleccionar\n");
-            scanf("%d",&x);
-            scanf("%d",&y);
+            printf("Ingrese el id de entregas a seleccionar\n");
+            scanf("%d",&idEntrega1);
+            scanf("%d",&idEntrega2);
 
-            dis_entregas(Entregas,x,y);
+            dis_entregas(Entregas,idEntrega1,idEntrega2);
 
             break;
 
@@ -102,12 +103,12 @@ int main(){
 
             break;
 
-        case 5://Busca pokemons por nombre en el almacenamiento
+        case 5://
             printf("Ingrese su lugar de partida\n");
             scanf("%d",&x);
             scanf("%d",&y);
 
-            ruta_aleatoria(Entregas,n,x,y);
+            ruta_aleatoria(Entregas,cantEntregas,x,y);
 
             break;
 
@@ -125,7 +126,7 @@ int main(){
 
         case 8://No se hizo
 
-            printf("8. Mostrar Pokemons del Almacenamiento ordenados por PC \n");
+            printf("8. Mostrar mejor ruta\n");
 
             break;
 

@@ -20,11 +20,11 @@ entrega* crearEntrega(int numEntrega, int coorX, int coorY,bool flag);
 
 void mostrarMapa(Map* mapa);
 
-void dis_entregas(Map* mapa,int x,int y);
+void dis_entregas(Map* mapa,int idEntrega1,int idEntrega2);
 
-void ruta_aleatoria(Map* mapa,int n,int x,int y);
+void ruta_aleatoria(Map* mapa,int cantEntregas,int x,int y);
 
-int dis_entregas_1(Map* mapa,int x,int y);
+int dis_entregas_1(Map* mapa,int idEntrega1,int idEntrega2);
 
-int dis_entregas_2_0(Map* mapa,int x,int y,int numero);
+int dis_entregas_2_0(Map* mapa,int x,int y,int idEntrega1);
 #endif

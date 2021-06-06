@@ -76,14 +76,14 @@ void mostrarMapa(Map* mapa){
     return;
 }
 
-void dis_entregas(Map* mapa,int x,int y){
+void dis_entregas(Map* mapa,int idEntrega1,int idEntrega2){ //calcular distancia teniendo los ids de ambas entregas, imprime el valor de la distancia
 
     int aux,cont,suma_1,suma_2,distancia;
     entrega* oEntrega_1 = (entrega*) malloc(sizeof(entrega));
     entrega* oEntrega_2 = (entrega*) malloc(sizeof(entrega));
 
-    oEntrega_1 = searchMap(mapa,x);
-    oEntrega_2 = searchMap(mapa,y);
+    oEntrega_1 = searchMap(mapa,idEntrega1);
+    oEntrega_2 = searchMap(mapa,idEntrega2);
 
     aux = oEntrega_1->coordenadaX;
     cont = oEntrega_2->coordenadaX;
@@ -101,14 +101,15 @@ void dis_entregas(Map* mapa,int x,int y){
     return;
 
 }
-int dis_entregas_1(Map* mapa,int x,int y){
+
+int dis_entregas_1(Map* mapa,int idEntrega1,int idEntrega2){ //calcula distancia entre 2 entregas, teniendo su id y retorna dicho calculo
 
     int aux,cont,suma_1,suma_2,distancia;
     entrega* oEntrega_1 = (entrega*) malloc(sizeof(entrega));
     entrega* oEntrega_2 = (entrega*) malloc(sizeof(entrega));
 
-    oEntrega_1 = searchMap(mapa,x);
-    oEntrega_2 = searchMap(mapa,y);
+    oEntrega_1 = searchMap(mapa,idEntrega1);
+    oEntrega_2 = searchMap(mapa,idEntrega2);
 
     aux = oEntrega_1->coordenadaX;
     cont = oEntrega_2->coordenadaX;
@@ -125,36 +126,46 @@ int dis_entregas_1(Map* mapa,int x,int y){
     return distancia;
 }
 
-int dis_entregas_2_0(Map* mapa,int x,int y,int numero){
+int dis_entregas_2_0(Map* mapa,int x,int y,int idEntrega){ //calcula la distancia entre una posicion y una entrega a traves de su id, retorna el valor de la distancia
 
-    int aux,cont,suma_1,suma_2,distancia;
+    int posX, posY;
+    int suma_1,suma_2,distancia;
+    int entregaPosX, entregaPosY;
+
     entrega* oEntrega_1 = (entrega*) malloc(sizeof(entrega));
 
-    oEntrega_1 = searchMap(mapa,numero);
+    oEntrega_1 = searchMap(mapa,idEntrega);
 
-    aux = oEntrega_1->coordenadaX;
-    cont = x;
+    entregaPosX = oEntrega_1->coordenadaX;
+    posX = x;
 
-    suma_1 = pow(aux - cont,2);
+    suma_1 = pow(entregaPosX - posX,2);
 
-    aux = oEntrega_1->coordenadaY;
-    cont = y;
+    entregaPosY = oEntrega_1->coordenadaY;
+    posY = y;
 
-    suma_2 = pow(aux - cont,2);
+    suma_2 = pow(entregaPosY - posY,2);
 
     distancia = sqrt(suma_1+suma_2);
 
     return distancia;
 }
 
-void ruta_aleatoria(Map* mapa,int n,int x,int y){
-    int aux,distancia,numero,cont = 0;
+void ruta_aleatoria(Map* mapa,int cantEntregas,int x,int y){
+
+    int aux, distancia, numero;
+    int cont = 0;
+
     entrega* oEntrega = (entrega*) malloc(sizeof(entrega));
-    printf("Lugar de partida\n");
-    printf("%d,%d\n",x,y);
-    while(cont < n){
-        numero = rand() % n + 1;
+
+    //printf("Lugar de partida\n");
+    //printf("%d,%d\n",x,y);
+
+    while(cont < cantEntregas){
+        numero = rand() % cantEntregas + 1;
+
         oEntrega = searchMap(mapa,numero);
+
         if(cont == 0){
             distancia = dis_entregas_2_0(mapa,x,y,numero);
 
@@ -172,6 +183,9 @@ void ruta_aleatoria(Map* mapa,int n,int x,int y){
         }
 
     }
-    printf("%d",distancia);//distancia total
+
+
+
+    printf("Distancia total del recorrido: %d\n",distancia);//distancia total
     return;
 }

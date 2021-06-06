@@ -1,36 +1,40 @@
 # depslib dependency file v1.0
-1621832774 source:c:\users\jefte\documents\github\tarea_3\list.c
+1622945749 source:c:\users\jefte\documents\github\tarea_3\list.c
 	"list.h"
 	<stdlib.h>
 	<assert.h>
 
-1621832774 c:\users\jefte\documents\github\tarea_3\list.h
+1622945749 c:\users\jefte\documents\github\tarea_3\list.h
 
-1621832774 source:c:\users\jefte\documents\github\tarea_3\map.c
+1622945749 source:c:\users\jefte\documents\github\tarea_3\map.c
 	"Map.h"
 	<stdlib.h>
 	<assert.h>
 
-1621832774 c:\users\jefte\documents\github\tarea_3\map.h
+1622945749 c:\users\jefte\documents\github\tarea_3\map.h
 
-1621834681 source:c:\users\jefte\documents\github\tarea_3\main.c
+1622948510 source:c:\users\jefte\documents\github\tarea_3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"funciones.h"
 	"map.h"
+	<stdbool.h>
 
-1621834650 source:c:\users\jefte\documents\github\tarea_3\funciones.c
+1622946271 source:c:\users\jefte\documents\github\tarea_3\funciones.c
 	"list.h"
 	"funciones.h"
 	"map.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<math.h>
+	<stdbool.h>
 
-1621834659 c:\users\jefte\documents\github\tarea_3\funciones.h
+1622948553 c:\users\jefte\documents\github\tarea_3\funciones.h
 	<stdio.h>
 	"map.h"
+	<stdbool.h>
 
 1621877741 source:c:\users\the_i\documents\github\tarea_3\funciones.c
 	"list.h"

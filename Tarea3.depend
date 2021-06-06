@@ -73,3 +73,40 @@
 	"map.h"
 	<stdbool.h>
 
+1623013066 source:c:\users\pablo\desktop\tarea_3\list.c
+	"list.h"
+	<stdlib.h>
+	<assert.h>
+
+1623013066 c:\users\pablo\desktop\tarea_3\list.h
+
+1623013066 source:c:\users\pablo\desktop\tarea_3\map.c
+	"Map.h"
+	<stdlib.h>
+	<assert.h>
+
+1623013066 c:\users\pablo\desktop\tarea_3\map.h
+
+1623016617 source:c:\users\pablo\desktop\tarea_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"map.h"
+	<stdbool.h>
+
+1623013066 c:\users\pablo\desktop\tarea_3\funciones.h
+	<stdio.h>
+	"map.h"
+	<stdbool.h>
+
+1623018358 source:c:\users\pablo\desktop\tarea_3\funciones.c
+	"list.h"
+	"funciones.h"
+	"map.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<stdbool.h>
+

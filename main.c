@@ -5,7 +5,7 @@
 #include "map.h"
 #include <stdbool.h>
 
-int x,y;
+
 
 /*
   función para comparar claves de tipo string
@@ -45,6 +45,7 @@ int lower_than_int(void * key1, void * key2) {
 
 
 int main(){
+    int x,y;
     int cantEntregas;
     int idEntrega1, idEntrega2;
     FILE * archivo = fopen("tarea3_tsp.txt", "rb");
@@ -93,7 +94,13 @@ int main(){
 
             break;
 
-        case 3://Evoluciona un pokemon por id, siempre y cuando tenga evolucion
+        case 3:
+
+            printf("Ingrese las coordenadas de su lugar de partida\n");
+            scanf("%d",&x);
+            scanf("%d",&y);
+
+            calcular_menor_ruta(Entregas,cantEntregas,x,y);
 
             break;
 

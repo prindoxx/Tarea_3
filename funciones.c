@@ -151,6 +151,47 @@ int dis_entregas_2_0(Map* mapa,int x,int y,int idEntrega){ //calcula la distanci
     return distancia;
 }
 
+void calcular_menor_ruta(Map* mapa,int cantEntregas,int x,int y){
+
+    int distancia = 0;
+    int min = 2000000000;
+    int cont = 0;
+    int id = 0;
+    int numero;
+
+    entrega* oEntrega = (entrega*) malloc(sizeof(entrega));
+    int* vector = (int*) malloc(cantEntregas * sizeof(int));
+
+    for(int i=0 ; i < cantEntregas ; i++){
+
+        distancia = dis_entregas_2_0(mapa, x, y, (i+1));
+        vector[i] = distancia;
+        printf("%d\n", vector[i]);
+    }
+
+    if(cantEntregas < 3){
+        numero = cantEntregas;
+    }
+    else numero=3;
+    printf("Las %d entregas mas cercanas son:\n", numero);
+
+    while(cont < numero){
+        for(int j=0 ; j < cantEntregas ; j++){
+
+            if(min > vector[j]){
+                min = vector[j];
+                id = j+1;
+            }
+        }
+        printf("id: %d  distancia: %d\n", id, vector[id-1]);
+        cont++;
+        vector[id-1] = 2000000000;
+        min = 2000000000;
+    }
+
+
+}
+
 void ruta_aleatoria(Map* mapa,int cantEntregas,int x,int y){
 
     int aux, distancia, numero;

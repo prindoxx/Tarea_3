@@ -110,3 +110,40 @@
 	<math.h>
 	<stdbool.h>
 
+1623045667 source:c:\users\darien\documents\github\tarea_3\funciones.c
+	"list.h"
+	"funciones.h"
+	"map.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<stdbool.h>
+
+1623044882 c:\users\darien\documents\github\tarea_3\list.h
+
+1623045668 c:\users\darien\documents\github\tarea_3\funciones.h
+	<stdio.h>
+	"map.h"
+	<stdbool.h>
+
+1623044882 c:\users\darien\documents\github\tarea_3\map.h
+
+1623044882 source:c:\users\darien\documents\github\tarea_3\list.c
+	"list.h"
+	<stdlib.h>
+	<assert.h>
+
+1623045670 source:c:\users\darien\documents\github\tarea_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"map.h"
+	<stdbool.h>
+
+1623044882 source:c:\users\darien\documents\github\tarea_3\map.c
+	"Map.h"
+	<stdlib.h>
+	<assert.h>
+

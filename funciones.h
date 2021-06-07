@@ -12,7 +12,6 @@ typedef struct{
     bool flag;
 }entrega;
 
-//crear estructuras ruta...con la ruta y los datos de entrega
 
 void abrirArchivo(FILE * archivo, Map * Entregas, int n );
 

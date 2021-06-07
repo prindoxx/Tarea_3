@@ -52,7 +52,7 @@ int main(){
     Map* Entregas = createMap(is_equal_int);//Se crea el mapa para poder agregar la entregas, su clave sera el numero de entrega
     int op;
 
-    while(1){
+    while(1){//Muestra el menu
 
 
         printf("Seleccione una opcion:\n");
@@ -83,7 +83,7 @@ int main(){
 
             break;
 
-        case 2://Agrega un pokemon al almacenamiento
+        case 2://Este caso calcula la distancia entre 2 puntos de entrega
 
 
             printf("Ingrese el id de entregas a seleccionar\n");
@@ -94,7 +94,8 @@ int main(){
 
             break;
 
-        case 3:
+        case 3://Este caso muestra las 3 entregas mas cercanas al lugar de partida
+
 
             printf("Ingrese las coordenadas de su lugar de partida\n");
             scanf("%d",&x);
@@ -104,13 +105,13 @@ int main(){
 
             break;
 
-        case 4://Busca pokemon por tipo en el almacenamiento
+        case 4://No se hizo
 
 
 
             break;
 
-        case 5://
+        case 5:// Este caso es para crear una ruta aleatoria segun algun punto de partida dado
             printf("Ingrese su lugar de partida\n");
             scanf("%d",&x);
             scanf("%d",&y);
@@ -119,13 +120,13 @@ int main(){
 
             break;
 
-        case 6://Busca pokemon por nombre en la pokedex
+        case 6://No se hizo
 
 
 
             break;
 
-        case 7://Muestra todos los pokemon de la pokedex
+        case 7://No se hizo
 
 
             break;

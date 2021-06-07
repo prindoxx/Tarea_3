@@ -87,8 +87,11 @@ int main(){
 
 
             printf("Ingrese el id de entregas a seleccionar\n");
+            printf("Entrega 1:\n");
             scanf("%d",&idEntrega1);
+            printf("Entrega 2:\n");
             scanf("%d",&idEntrega2);
+            printf("\n");
 
             dis_entregas(Entregas,idEntrega1,idEntrega2);
 

@@ -1,3 +1,0 @@
-# Tarea_3
-tarea 3
-AQUI IRA EL README DE LA TAREA 3
